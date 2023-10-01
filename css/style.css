@@ -1,0 +1,135 @@
+/********************************
+* General Reset
+********************************/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+p,
+h1,
+h2 {
+    overflow-wrap: break-word;
+}
+
+input,
+button {
+    font: inherit;
+}
+
+/********************************
+  * Custom Properties
+  ********************************/
+
+:root {
+    --Light-Cyan: hsl(193, 38%, 86%);
+    --Neon-Green: hsl(150, 100%, 66%);
+    --Grayish-Blue: hsl(217, 19%, 38%);
+    --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+    --Dark-Blue: hsl(218, 23%, 16%);
+}
+
+
+/********************************
+  * Styling
+  ********************************/
+
+html {
+    font-family: 'Manrope', sans-serif;
+}
+
+body {
+    background-color: var(--Dark-Blue);
+}
+
+.card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    
+}
+
+.card {
+    background-color: var(--Dark-Grayish-Blue);
+    max-width: 500px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    padding-bottom: 0px;
+}
+
+h1 {
+    color: var(--Neon-Green);
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: var(--Light-Cyan);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.break {
+    margin-bottom: 10px;
+}
+
+.button-img {
+    background-color: var(--Neon-Green);
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: var(--Neon-Green);
+    border-radius: 80px;
+}
+
+.btn {
+    background-color: none;
+    border-radius: 80px;
+    border: none;
+    transform: translate(0px, 30px);
+    cursor: pointer;
+}
+
+.button-container:hover {
+    box-shadow: 0px 0px 20px var(--Neon-Green);
+}
+
+.mobile {
+    display: none;
+}
+
+/************************
+* Responsiveness
+************************/
+
+@media(max-width: 550px) {
+    .card {
+        margin: 40px;
+        max-width: 310px;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+}
